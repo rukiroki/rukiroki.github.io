@@ -20,44 +20,57 @@
             margin-left: 20%;
         }
         }
-        .main{
-            
-            background-color: rgb(79, 99, 44);
+        div{
             padding: 10px 30px 10px 30px;
             box-sizing: border-box;
-            margin-top: -10px;
-            box-shadow: 5px 0px 5px rgb(28, 53, 11) inset;
+            margin: -10px;
+            box-shadow: 5px 0px 5px #004446 inset;
+        }
+        .normal{
+            box-shadow:0px 0px 0px;
+            height: 200px;
+        }
+        .main{
             
+            background-color: #004446;
+       
         }
         body{
             background-color: rgb(0, 0, 0);
             background-image: url('Floder1/img/back.png');
         }
         h1{
-            font-weight: 600;
+            font-weight: 500;
             text-align: center;
             line-height: 80px;
+            color: #fcd900;
+            box-shadow: 2px 2px 0px 0px  inset;
             
         }
         h2{
             font-weight: 500;
-            color: rgb(0, 0, 0);
-            text-shadow: 1px 1px 2px rgb(70, 9, 9);
+            color: #fcd900;
+            text-shadow: 1px 2px 0px black;
+            padding-left: 10px;
         }
         h3{
             font-weight: 500;
-            color: rgb(42, 187, 42);
+            color: #6dba92;
             line-height: 30px;
             text-shadow: 1px 1px black;
+            padding-left: 10px;
         }
         .h25{
             font-weight: 600;
+        }
+        .h35{
+            color: #e49631;
         }
         p{
             text-indent: 2em;
         }
         .version{
-            color: rgb(27, 167, 62);
+            color: rgb(71, 189, 243);
             font-weight: 450;
         }
         hr{
@@ -68,22 +81,30 @@
             width: 105%;
 
         }
-        .bottom{
-            height: 100px;
-        }
+        
         a{
             color: rgba(197, 199, 87, 0.664);
             font-weight: 300;
         }
         h3.a{
-            color: rgb(199, 92, 226);
+            color: #feb3be;
         }
         h3.q{
-            color: rgb(116, 161, 243);
+            color: #e775ba;
         }
         h4{
             font-weight: 400;
             color: rgba(0, 0, 0, 0.5);
+        }
+        .questions{
+            background-color: #2d7973;
+            margin: -10px;
+            
+        }
+        .q1{
+            box-shadow: 2px 1px 0px #fcd900 inset;
+            width: 150px;
+            line-height: 2em;
         }
 
     </style>
@@ -95,20 +116,20 @@
 <div class="main">
 
 <h1>Rukiroki的基岩版服务器</h1>
-<h2>在开始之前</h2>
+<h2 class="h25 q1">在开始之前</h2>
 <h3>此服务器是会一直开下去的免费服务器。纯生存无死亡不掉落，作弊模式：关。刻度距：4。Mod：无mod，但有光线追踪资源包。请确保你会遵守戏潜规则，文明游戏。</h3>
-<h2 class="h25">如何加入</h2>
+<h2 class="h25 q1">如何加入</h2>
 <h2>1，确保你有一个微软账户</h2>
 <h3>如果你没有，请点击链接<a href="https://account.microsoft.com/account/Account?mkt=zh-CN">Microsoft account | 立即登录或创建帐户 – Microsoft</a>创建账户。Windows用户注册完成之后请在Windows设置里登录在线账户。</h3>
 <h2>2，下载游戏</h2>
 <h3>当前游戏版本：<span class="version">1.20.41</span></h3>
-<h3>我要支持正版：
+<h3  class="h35">我要支持正版：</h3><h3>
     <p>安卓：从谷歌商店购买Minecraft：<a href="https://play.google.com/store/search?q=minecraft&c=apps&hl=zh-CN">minecraft - Google Play 上的 Android 应用</a>。
     </p><p>Windows：从微软商店购买：<a href="https://www.xbox.com/zh-cn/games/store/minecraft-java-bedrock-edition-for-pc/9nxp44l49shj">购买 Minecraft: Java & Bedrock Edition for PC | Xbox</a>
         并从此链接下载安装包：<a href="https://www.mcappx.com/bedrock/1.20/#release-12041">Windows版我的世界安装包下载v1.20.41</a>安装即可。</p>
         <p>苹果：如果您没有境外ios账户，则无法支持正版。</p>
 </h3>
-<h3>我是免费用户：<p>安卓：从此链接下载安装包：<a href="https://mcapks.net/down.php?vs=1.20.41.02_64">Minecraft安卓版下载v1.20.41</a>安装即可。</p>
+<h3 class="h35">我是免费用户：</h3><h3><p>安卓：从此链接下载安装包：<a href="https://mcapks.net/down.php?vs=1.20.41.02_64">Minecraft安卓版下载v1.20.41</a>安装即可。</p>
 <p>Windows：从此链接下载安装包：<a href="https://www.mcappx.com/bedrock/1.20/#release-12041">Windows版我的世界安装包下载v1.20.41</a>
     安装，并进入此网址获取免费试用版：<a href="https://www.microsoft.com/zh-hk/p/minecraft-for-windows/9nblggh2jhxj">取得 Minecraft for Windows - Microsoft Store zh-HK</a>，并从此链接下载破解器：<a href="https://wwz.lanzout.com/i0IQc12r3wlc">MCunlocker-蓝奏云分享</a>密码:de3t。运行破解器即可。</p>
 <p>苹果：借国际版ios账号下载，具体参见qq频道<a href="https://pd.qq.com/s/h330oyzd4">qq频道：Minecraft大杂烩</a></p>
@@ -118,8 +139,9 @@
 <h2>4，加入服务器</h2>
 <h3><p>服务器IP：rukiroki.aternos.me 端口：54387</p>
 <p>请在加入之前联系腐竹将您的名字加入白名单</p></h3>
-<hr>
-<h2>遇到问题？</h2>
+</div>
+<div class="questions">
+<h2 class="h25 q1">遇到问题？</h2>
 <h3 class="q">Q：无法连接到世界</h3>
 <h3 class="a">A：多试几次，检查IP和端口是否正确</h3>
 <hr class="q">
@@ -147,7 +169,7 @@
 <h3 class="q">Q：你并未获邀在此服务器上进行游戏</h3>
 <h3 class="a">A：未加入白名单或者您的名字提供错误，请联系腐竹将正确的名字加入白名单</h3>
 
-<div class="bottom"></div>
+<div class="normal"></div>
 
 <h4>遇到其他问题？<a href="mailto:chenbingye@163.com?subject=我在加入服务器的过程中出现了问题&body=请详细描述您的问题">联系我</a></h4>
 </div>
