@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,7 +33,7 @@
         .main{
             
             background-color: #004446;
-       
+            padding-bottom: 50px;
         }
         body{
             background-color: rgb(0, 0, 0);
@@ -55,7 +55,7 @@
         }
         h3{
             font-weight: 500;
-            color: #6dba92;
+            color: #78c99f;
             line-height: 30px;
             text-shadow: 1px 1px black;
             padding-left: 10px;
@@ -70,27 +70,28 @@
             text-indent: 2em;
         }
         .version{
-            color: rgb(71, 189, 243);
-            font-weight: 450;
+            color: rgb(0, 255, 42);
+            font-weight: 300;
+            
         }
         hr{
-            height: 2px;
+            height: 1px;
             border: 0px;
-            background-color: rgb(23, 61, 2);
-            margin-left: -30px;
+            background-color: rgb(77, 172, 97);
             width: 105%;
-
         }
         
         a{
-            color: rgba(197, 199, 87, 0.664);
+            color: rgb(0, 217, 255);
             font-weight: 300;
         }
         h3.a{
-            color: #feb3be;
+            color: #00ffff;
         }
         h3.q{
-            color: #e775ba;
+            color: #d3ff35;
+            background-color: rgba(27, 206, 146, 0.534);
+            border: solid #123b3b59 1px;
         }
         h4{
             font-weight: 400;
@@ -106,8 +107,32 @@
             width: 150px;
             line-height: 2em;
         }
+        .tocopy{
+            background-color: rgba(0, 0, 0, 0.5);
+            font-weight: 300;
+        }
+        .ps{
+            color: rgba(206, 206, 206, 0.678);
+            font-weight: 300;
+            font-size: medium;
+            margin-left: 1em;
+        }
+        img{
+            width: 100%;
+            max-width: max-content;
+        }
 
     </style>
+    <script>
+        const serverip = "rukiroki.aternos.me"
+        const serverport = "54387"
+        function setClipboard(text) {
+        const type = "text/plain";
+        const blob = new Blob([text], { type });
+        const data = [new ClipboardItem({ [type]: blob })];
+        navigator.clipboard.write(data);
+        }
+    </script>
 </head>
 <body>
     
@@ -137,8 +162,10 @@
 <h2>3，登录游戏</h2>
 <h3><p>Windows版本会自动通过电脑账户自动登录Minecraft。手机版用户在游戏左下角登录您的微软账户。</p></h3>
 <h2>4，加入服务器</h2>
-<h3><p>服务器IP：rukiroki.aternos.me 端口：54387</p>
+<h3><p>服务器IP：<span class="tocopy" onclick="setClipboard(serverip)">rukiroki.aternos.me</span> 端口：<span class="tocopy" onclick="setClipboard(serverport)">54387</span><span class="ps">点击深色区域复制到剪切板</span></p>
 <p>请在加入之前联系腐竹将您的名字加入白名单</p></h3>
+<h2 class="q1">地图预览</h2>
+<a href="20240414\map\map.html"><img src="img\mappreview.png" alt="地图预览"></a>
 </div>
 <div class="questions">
 <h2 class="h25 q1">遇到问题？</h2>
@@ -147,6 +174,9 @@
 <hr class="q">
 <h3 class="q">Q：过期的客户端、过期的服务器、每个人都应更新到最新版本</h3>
 <h3 class="a">A：Windows会自动更新游戏版本,重新安装你下载的Minecraft安装包。ps:此服务器不会频繁更新（每个大版本只会更新2~3次，照顾手机用户）</h3>
+<hr class="q">
+<h3 class="q">Q：Windows版我的世界如何关闭自动更新</h3>
+<h3 class="a">A：<a href="how-to-block-win10mc-update.html">点击此链接查看教程</a></h3>
 <hr class="q">
 <h3 class="q">Q：此服务器处于离线状态</h3>
 <h3 class="a">A：联系有开启权限的玩家开启服务器（服务器会在最后一个玩家离开一段时间自动关闭）</h3>
