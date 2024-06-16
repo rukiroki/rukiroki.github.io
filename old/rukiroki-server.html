@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rukiroki</title>
+    <style>
+        /* 对于宽度小于或等于768px的设备（通常是平板或手机） */
+        @media screen and (max-width: 768px) {
+        /* 移动设备特有的样式 */
+
+        }
+
+        /* 对于宽度大于768px的设备（通常是桌面或笔记本电脑） */
+        @media screen and (min-width: 769px) {
+        
+        /* PC设备特有的样式 */
+        .main{
+            width: 60%;
+            margin-left: 20%;
+        }
+        }
+        div{
+            padding: 10px 30px 10px 30px;
+            box-sizing: border-box;
+            margin: -10px;
+            box-shadow: 5px 0px 5px #004446 inset;
+        }
+        .normal{
+            box-shadow:0px 0px 0px;
+            height: 200px;
+        }
+        .main{
+            
+            background-color: #004446;
+            padding-bottom: 50px;
+        }
+        body{
+            background-color: rgb(0, 0, 0);
+            background-image: url('img/back.png');
+        }
+        h1{
+            font-weight: 500;
+            text-align: center;
+            line-height: 80px;
+            color: #fcd900;
+            box-shadow: 2px 2px 0px 0px  inset;
+            
+        }
+        h2{
+            font-weight: 500;
+            color: #fcd900;
+            text-shadow: 1px 2px 0px black;
+            padding-left: 10px;
+        }
+        h3{
+            font-weight: 500;
+            color: #78c99f;
+            line-height: 30px;
+            text-shadow: 1px 1px black;
+            padding-left: 10px;
+        }
+        .h25{
+            font-weight: 600;
+        }
+        .h35{
+            color: #e49631;
+        }
+        p{
+            text-indent: 2em;
+        }
+        .version{
+            color: rgb(0, 255, 42);
+            font-weight: 300;
+            
+        }
+        hr{
+            height: 1px;
+            border: 0px;
+            background-color: rgb(77, 172, 97);
+            width: 105%;
+        }
+        
+        a{
+            color: rgb(0, 217, 255);
+            font-weight: 300;
+        }
+        h3.a{
+            color: #00ffff;
+        }
+        h3.q{
+            color: #d3ff35;
+            background-color: rgba(27, 206, 146, 0.534);
+            border: solid #123b3b59 1px;
+        }
+        h4{
+            font-weight: 400;
+            color: rgba(0, 0, 0, 0.5);
+        }
+        .questions{
+            background-color: #2d7973;
+            margin: -10px;
+            
+        }
+        .q1{
+            box-shadow: 2px 1px 0px #fcd900 inset;
+            width: 150px;
+            line-height: 2em;
+        }
+        .tocopy{
+            background-color: rgba(0, 0, 0, 0.5);
+            font-weight: 300;
+        }
+        .ps{
+            color: rgba(206, 206, 206, 0.678);
+            font-weight: 300;
+            font-size: medium;
+            margin-left: 1em;
+        }
+        img{
+            width: 100%;
+            max-width: max-content;
+        }
+
+    </style>
+    <script>
+        const serverip = "rukiroki.aternos.me"
+        const serverport = "54387"
+        function setClipboard(text) {
+        const type = "text/plain";
+        const blob = new Blob([text], { type });
+        const data = [new ClipboardItem({ [type]: blob })];
+        navigator.clipboard.write(data);
+        }
+    </script>
+</head>
+<body>
+    
+
+
+<div class="main">
+
+<h1>Rukiroki的基岩版服务器</h1>
+<h2 class="h25 q1">在开始之前</h2>
+<h3>此服务器是会一直开下去的免费服务器。纯生存无死亡不掉落，作弊模式：关。刻度距：4。Mod：无mod，但有光线追踪资源包。请确保你会遵守戏潜规则，文明游戏。</h3>
+<h2 class="h25 q1">如何加入</h2>
+<h2>1，确保你有一个微软账户</h2>
+<h3>如果你没有，请点击链接<a href="https://account.microsoft.com/account/Account?mkt=zh-CN">Microsoft account | 立即登录或创建帐户 – Microsoft</a>创建账户。Windows用户注册完成之后请在Windows设置里登录在线账户。</h3>
+<h2>2，下载游戏</h2>
+<h3>当前游戏版本：<span class="version">1.20.41</span></h3>
+<h3  class="h35">我要支持正版：</h3><h3>
+    <p>安卓：从谷歌商店购买Minecraft：<a href="https://play.google.com/store/search?q=minecraft&c=apps&hl=zh-CN">minecraft - Google Play 上的 Android 应用</a>。
+    </p><p>Windows：从微软商店购买：<a href="https://www.xbox.com/zh-cn/games/store/minecraft-java-bedrock-edition-for-pc/9nxp44l49shj">购买 Minecraft: Java & Bedrock Edition for PC | Xbox</a>
+        并从此链接下载安装包：<a href="https://www.mcappx.com/bedrock/1.20/#release-12041">Windows版我的世界安装包下载v1.20.41</a>安装即可。</p>
+        <p>苹果：如果您没有境外ios账户，则无法支持正版。</p>
+</h3>
+<h3 class="h35">我是免费用户：</h3><h3><p>安卓：从此链接下载安装包：<a href="https://mcapks.net/down.php?vs=1.20.41.02_64">Minecraft安卓版下载v1.20.41</a>安装即可。</p>
+<p>Windows：从此链接下载安装包：<a href="https://www.mcappx.com/bedrock/1.20/#release-12041">Windows版我的世界安装包下载v1.20.41</a>
+    安装，并进入此网址获取免费试用版：<a href="https://www.microsoft.com/zh-hk/p/minecraft-for-windows/9nblggh2jhxj">取得 Minecraft for Windows - Microsoft Store zh-HK</a>，并从此链接下载破解器：<a href="https://wwz.lanzout.com/i0IQc12r3wlc">MCunlocker-蓝奏云分享</a>密码:de3t。运行破解器即可。</p>
+<p>苹果：借国际版ios账号下载，具体参见qq频道<a href="https://pd.qq.com/s/h330oyzd4">qq频道：Minecraft大杂烩</a></p>
+</h3>
+<h2>3，登录游戏</h2>
+<h3><p>Windows版本会自动通过电脑账户自动登录Minecraft。手机版用户在游戏左下角登录您的微软账户。</p></h3>
+<h2>4，加入服务器</h2>
+<h3><p>服务器IP：<span class="tocopy" onclick="setClipboard(serverip)">rukiroki.aternos.me</span> 端口：<span class="tocopy" onclick="setClipboard(serverport)">54387</span><span class="ps">点击深色区域复制到剪切板</span></p>
+<p>请在加入之前联系腐竹将您的名字加入白名单</p></h3>
+<h2 class="q1">地图预览</h2>
+<a href="overworld/unmined.index.html"><img src="img\mappreview.png" alt="地图预览"></a>
+</div>
+<div class="questions">
+<h2 class="h25 q1">遇到问题？</h2>
+<h3 class="q">Q：无法连接到世界</h3>
+<h3 class="a">A：多试几次，检查IP和端口是否正确</h3>
+<hr class="q">
+<h3 class="q">Q：过期的客户端、过期的服务器、每个人都应更新到最新版本</h3>
+<h3 class="a">A：Windows会自动更新游戏版本,重新安装你下载的Minecraft安装包。ps:此服务器不会频繁更新（每个大版本只会更新2~3次，照顾手机用户）</h3>
+<hr class="q">
+<h3 class="q">Q：Windows版我的世界如何关闭自动更新</h3>
+<h3 class="a">A：<a href="how-to-block-win10mc-update.html">点击此链接查看教程</a></h3>
+<hr class="q">
+<h3 class="q">Q：此服务器处于离线状态</h3>
+<h3 class="a">A：联系有开启权限的玩家开启服务器（服务器会在最后一个玩家离开一段时间自动关闭）</h3>
+<hr class="q">
+<h3 class="q">Q：不成功	在XXXX目录中找不到xxxxx，请稍后再试</h3>
+<h3 class="a">A：请在其他浏览器进行下载，不要使用微信浏览器</h3>
+<hr class="q">
+<h3 class="q">Q：资源包下载好慢，我可以不用下载吗</h3>
+<h3 class="a">A：可以，资源包是光线追踪，手机玩家完全不用下载，电脑玩家看需求下载</h3>
+<hr class="q">
+<h3 class="q">Q：Minecraft在Windows上安装好了，在哪启动？</h3>
+<h3 class="a">A：开始菜单</h3>
+<hr class="q">
+<h3 class="q">Q：游戏版本是Java版吗</h3>
+<h3 class="a">A：不是，是基岩版</h3>
+<hr class="q">
+<h3 class="q">Q：您好：<span style="color:rgb(0, 255, 13)">玩家名</span> 连接到 <span style="color:rgb(0, 255, 13)">xxxxxxxx</span></h3>
+<h3 class="a">A：服务器临时分配了另一个地址，你可以选择新建服务器输入它提供的地址(<span style="color:rgb(0, 255, 13)">xxxxxxxx</span>)，也可以重进试试。</h3>
+<hr class="q">
+<h3 class="q">Q：你并未获邀在此服务器上进行游戏</h3>
+<h3 class="a">A：未加入白名单或者您的名字提供错误，请联系腐竹将正确的名字加入白名单</h3>
+<hr class="q">
+<h3 class="q">Q：服务器延迟过高，有什么办法吗</h3>
+<h3 class="a">A：可以 <a href="https://www.itdog.cn/ping/rukiroki.aternos.me">点此</a> 尝试寻找您当前地区延迟较低的DNS服务器，并更改您的DNS服务器。如何更改？： <a href="how-to-change-dns.html">点击此链接查看教程</a></h3>
+
+<div class="normal"></div>
+
+<h4>遇到其他问题？<a href="mailto:chenbingye@163.com?subject=我在加入服务器的过程中出现了问题&body=请详细描述您的问题">联系我</a></h4>
+</div>
+
+
+</body>
+</html>
