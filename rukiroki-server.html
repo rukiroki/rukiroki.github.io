@@ -162,6 +162,7 @@
             width: 100%;
             max-width: max-content;
             transition: 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+            
         }
         img:hover{
             transition: 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -210,6 +211,20 @@
         const data = [new ClipboardItem({ [type]: blob })];
         navigator.clipboard.write(data);
         }
+        var button=document.getElementsByClassName('button');
+        console.log(button);
+        window.onload=function(){
+            for (let i = 0; i < button.length; i++) {
+            button[i].addEventListener('click',
+                function(){
+                    var audio=document.getElementById('buttonAudio');
+                    console.log(audio);
+                    audio.play();
+                }
+            );
+        }
+        }
+        
     </script>
 </head>
 <body>
@@ -217,14 +232,14 @@
 
 
 <div class="main">
-
+<audio id="buttonAudio" src="audio/release-7c974.ogg" preload="auto"></audio>
 <div class="top">Rukiroki</div>
 <div class="place"></div>
 <h2 class="h25 q1">在开始之前</h2>
 <h3>此服务器是会一直开下去的免费服务器。纯生存无死亡不掉落，作弊模式：关。刻度距：4。Mod：无mod，但有光线追踪资源包。请确保你会遵守戏潜规则，文明游戏。</h3>
 <h2 class="h25 q1">如何加入</h2>
 <h2>1，确保你有一个微软账户</h2>
-<h3><a href="https://account.microsoft.com/account/Account?mkt=zh-CN"><div class="button">创建账户</div></a></h3>
+<h3><a href="https://account.microsoft.com/account/Account?mkt=zh-CN"></a></h3><div class="button">创建账户</div>
 <h2>2，下载游戏</h2>
 <h3>当前游戏版本：<span class="version">1.21.0</span></h3>
 <h3  class="h35">我要支持正版：</h3>
@@ -244,7 +259,7 @@
 <h3><p>服务器IP：<span class="tocopy" onclick="setClipboard(serverip)">rukiroki.aternos.me</span> 端口：<span class="tocopy" onclick="setClipboard(serverport)">54387</span><span class="ps">点击深色区域复制到剪切板</span></p>
 <p>请在加入之前联系腐竹将您的名字加入白名单</p></h3>
 <h2 class="q1">地图预览</h2>
-<a href="overworld/unmined.index.html"><img src="https://img-a1.catimg.cn/picture/2024/06/16/666eda21856ac.png" alt="地图预览"></a>
+<a href="overworld/unmined.index.html"><img src="/img/mappreview.png" alt="地图预览"></a>
 </div>
 <div class="questions">
 <h2 class="h25 q1">遇到问题？</h2>
