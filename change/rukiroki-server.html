@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rukiroki</title>
+    <style>
+        /* 对于宽度小于或等于768px的设备（通常是平板或手机） */
+        @media screen and (max-width: 768px) {
+        /* 移动设备特有的样式 */
+
+        }
+
+        /* 对于宽度大于768px的设备（通常是桌面或笔记本电脑） */
+        @media screen and (min-width: 769px) {
+        
+        /* PC设备特有的样式 */
+        .main{
+            width: 60%;
+            margin-left: 20%;
+        }
+        .questions{
+            width: 60%;
+            margin-left: 20%; 
+        }
+        }
+        @font-face {
+            font-family: 'BAUHS93';
+            src: url('/font/BAUHS93_subset.tff') format('truetype');
+        }
+        div.top{
+            color: #ffffff;
+            font-size: 30px;
+            position: fixed;
+            top:0;
+            left: 0;
+            background: #312f31;
+            width: 102vw;
+            box-shadow: 0px 1px 2px 0px #000;
+            font-family: 'BAUHS93';
+            line-height: 30px;
+            padding-top: 20px;
+        }
+        div.place{
+            height: 60px;
+        }
+        div{
+            padding: 10px 30px 10px 30px;
+            box-sizing: border-box;
+            margin: -10px;
+        }
+        .normal{
+            box-shadow:0px 0px 0px;
+            height: 200px;
+        }
+        .main{
+            color: #888888;
+            background-color: #3d3d3d;
+            padding-bottom: 50px;
+
+        }
+        body{
+            background-color: #3d3d3d;
+
+            /* background-image: url('img/back.png'); */
+            overflow-x: hidden;
+        }
+        ::-webkit-scrollbar {
+            display: none;
+
+        }
+        h1{
+            font-weight: 500;
+            text-align: center;
+            line-height: 80px;
+            color: #c3b8b3;
+            box-shadow: -1px 1px 3px 1px #000 ;
+            border-radius: 10px 10px 0px 0px;
+            font-size: 8mm;
+            
+        }
+        h2{
+            color: #aaa5aa;
+            font-weight: 400;
+            /* text-shadow: 1px 2px 0px rgba(0, 0, 0, 0.315); */
+            padding-left: 10px;
+            font-size: larger;
+        }
+        h3{
+            font-weight: 300;
+            color: #ffffff;
+            line-height: 30px;
+            /* text-shadow: 1px 1px black; */
+            padding-left: 10px;
+            margin-bottom: px;
+            font-size: 14px;
+            letter-spacing: 2px;
+        }
+        .h25{
+            font-weight: 400;
+            color: #000000;
+
+        }
+        .h35{
+            color: #e49631;
+        }
+        p{
+            text-indent: 2em;
+        }
+        .version{
+            color: #f24133;
+            font-weight: 300;
+            
+        }
+        hr{
+            height: 1px;
+            border: 0px;
+            background-color: rgb(77, 172, 97);
+            width: 105%;
+        }
+        
+        a{
+            color: #3aa852;
+            font-weight: 300;
+            text-decoration: none;
+        }
+        h3.a{
+            color: #ffff;
+        }
+        h3.q{
+            color: #ffffff;
+            background-color: #494949;
+            width: 100%;
+        }
+        h4{
+            font-weight: 400;
+            color: rgba(255, 255, 255, 0.459);
+        
+        }
+        .questions{
+            background-color: #00000093;
+            padding: 0px 30px 0px 30px ;
+        }
+        .q1{
+            color: black;
+            box-shadow: 0px 4px 0px 0px #585659 ;
+            margin-left: -30px;
+            margin-right: -30px;
+            line-height: 2em;
+            background-color: #c6c6c6;
+        }
+        .tocopy{
+            background-color: rgba(0, 0, 0, 0.5);
+            font-weight: 300;
+        }
+        .ps{
+            color: rgba(206, 206, 206, 0.678);
+            font-weight: 300;
+            font-size: medium;
+            margin-left: 1em;
+        }
+        img{
+            width: 100%;
+            max-width: max-content;
+            transition: 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+            
+        }
+        img:hover{
+            transition: 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+            scale: 1.05;
+
+        }
+        
+        div.button{
+            color: #000;
+            font-size: 15px;
+            display: flex;
+            justify-content: center;
+            line-height: 34px;
+            font-weight: 400;
+            margin: 0;
+            padding: 0;
+            
+            height: 40px;
+            width: 160px;
+            border-radius: 0px;
+            background: #c6c6c6;
+            border: #000 solid 2px;
+            box-shadow: 0px 2px 0px 0px #f7f7f7 inset,
+            2px 0px 0px 0px #f7f7f7 inset,
+            0px -2px 0px 0px #656465 inset,
+            -2px 0px 0px 0px #656465 inset;
+
+        }
+        div.button:hover{
+            color: #ffffff;
+            background: #218306;
+            border: #ffffff solid 2px;
+            box-shadow: 0px 2px 0px 0px #004e00 inset,
+            2px 0px 0px 0px #004e00 inset,
+            0px -2px 0px 0px #17cd07  inset,
+            -2px 0px 0px 0px #17cd07  inset;
+
+        }
+    </style>
+    <script>
+        const serverip = "rukiroki.aternos.me"
+        const serverport = "54387"
+        function setClipboard(text) {
+        const type = "text/plain";
+        const blob = new Blob([text], { type });
+        const data = [new ClipboardItem({ [type]: blob })];
+        navigator.clipboard.write(data);
+        }
+        var button=document.getElementsByClassName('button');
+        console.log(button);
+        window.onload=function(){
+            for (let i = 0; i < button.length; i++) {
+            button[i].addEventListener('click',
+                function(){
+                    var audio=document.getElementById('buttonAudio');
+                    console.log(audio);
+                    audio.play();
+                }
+            );
+        }
+        }
+        
+    </script>
+</head>
+<body>
+    
+
+
+<div class="main">
+<audio id="buttonAudio" src="audio/release-7c974.ogg" preload="auto"></audio>
+<div class="top">Rukiroki</div>
+<div class="place"></div>
+<h2 class="h25 q1">在开始之前</h2>
+<h3>此服务器是会一直开下去的免费服务器。纯生存无死亡不掉落，作弊模式：关。刻度距：4。Mod：无mod，但有光线追踪资源包。请确保你会遵守戏规则，文明游戏。</h3>
+<h2 class="h25 q1">如何加入</h2>
+<h2>0，我已做好万全准备，只差加入服务器</h2>
+
+<h3>点击此按钮将跳转到Minecraft客户端，并自动为您的游戏添加服务器<a href="https://add.aternos.org/rukiroki" target="_blank"><div class="button">添加服务器</div></a>之后您可以从服务器列表找到该服务器。</h3>
+<h2>：如果您没有我的世界，以下是安装教程</h2>
+<h2>1，确保你有一个微软账户</h2>
+<h3><a href="https://account.microsoft.com/account/Account?mkt=zh-CN" target="_blank"><div class="button">创建账户</div></a></h3>
+<h2>2，下载游戏</h2>
+<h3>当前游戏版本：<span class="version">1.21.0</span></h3>
+<h3  class="h35">支持正版：</h3>
+<h3> 安卓：从谷歌商店购买Minecraft：<a href="https://play.google.com/store/search?q=minecraft&c=apps&hl=zh-CN" target="_blank"><div class="button">立即购买</div></a></h3>
+<h3> Windows：从微软商店购买：<a href="https://www.xbox.com/zh-cn/games/store/minecraft-java-bedrock-edition-for-pc/9nxp44l49shj" target="_blank"><div class="button">前往购买</div></a></h3>
+<h3> 并从此链接下载安装包：安装即可。<a href="https://www.mcappx.com/bedrock/1.21/#release-1210" target="_blank"><div class="button">下载</div></a></h3>
+<h3>苹果：如果您没有境外ios账户，则无法支持正版。</h3> 
+<h3 class="h35">免费用户：</h3>
+<h3>安卓：直接点击按钮下载安装即可<a href="https://mcapks.net/down.php?vs=1.21.0.03_64" target="_blank"><div class="button">安卓版</div></a>
+<h3> Windows：从此链接下载安装包：<a href="https://www.mcappx.com/bedrock/1.21/#release-1210" target="_blank"><div class="button">Windows版</div></a></h3>
+<h3>安装，并进入此网址获取免费试用版：<a href="https://www.microsoft.com/zh-hk/p/minecraft-for-windows/9nblggh2jhxj" target="_blank"><div class="button">免费试用</div></a>并从此链接下载破解器：<a href="https://wwz.lanzout.com/i0IQc12r3wlc" target="_blank"><div class="button">MCUnlocker</div></a>密码:de3t。运行破解器即可。</h3> 
+<h3> 苹果：借国际版ios账号下载，具体参见qq频道<a href="https://pd.qq.com/s/h330oyzd4" target="_blank"><div class="button">加入qq频道</div></a></h3>
+</h3>
+<h2>3，登录游戏</h2>
+<h3><p>Windows版本会自动通过电脑账户自动登录Minecraft。手机版用户在游戏左下角登录您的Xbox（同微软）账户。</p></h3>
+<h2>4，加入服务器</h2>
+<h3><p>服务器IP：<span class="tocopy" onclick="setClipboard(serverip)">rukiroki.aternos.me</span> 端口：<span class="tocopy" onclick="setClipboard(serverport)">54387</span><span class="ps">点击深色区域复制到剪切板</span></p>
+<h3>或者直接点击<a href="https://add.aternos.org/rukiroki" target="_blank"><div class="button">添加服务器</div></a></h3>
+<h3>请在加入之前联系腐竹将您的名字加入白名单</h3>
+<h2 class="q1">地图（点击预览）</h2>
+<a href="overworld/unmined.index.html" target="_blank"><img src="https://s.tkbot.fun/img/mappreview.png" alt="地图预览"></a>
+</div>
+<div class="questions">
+<h2 class="h25 q1">遇到问题？</h2>
+<h3 class="q">Q：无法连接到世界</h3>
+<h3 class="a">A：多试几次，检查IP和端口是否正确。</h3>
+
+<h3 class="q">Q：过期的客户端、过期的服务器、每个人都应更新到最新版本</h3>
+<h3 class="a">A：Windows会自动更新游戏版本,重新安装你下载的Minecraft安装包。ps:此服务器不会频繁更新（每个大版本只会更新2~3次，照顾手机用户）</h3>
+
+<h3 class="q">Q：Windows版我的世界如何关闭自动更新</h3>
+<h3 class="a">A：<a href="how-to-block-win10mc-update.html" target="_blank">点击此链接查看教程</a></h3>
+
+<h3 class="q">Q：此服务器处于离线状态</h3>
+<h3 class="a">A：联系有开启权限的玩家开启服务器（服务器会在最后一个玩家离开一段时间自动关闭）</h3>
+
+<h3 class="q">Q：不成功	在XXXX目录中找不到xxxxx，请稍后再试</h3>
+<h3 class="a">A：请在其他浏览器进行下载，不要使用微信浏览器</h3>
+
+<h3 class="q">Q：资源包下载好慢，我可以不用下载吗</h3>
+<h3 class="a">A：可以，资源包是光线追踪，手机玩家不用下载，电脑玩家可以下载</h3>
+
+<h3 class="q">Q：Minecraft在电脑上安装好了，在哪启动？</h3>
+<h3 class="a">A：开始菜单</h3>
+
+<h3 class="q">Q：游戏版本是基岩版吗</h3>
+<h3 class="a">A：对，是基岩版</h3>
+
+<h3 class="q">Q：您好：<span style="color:rgb(0, 255, 13)">玩家名</span> 连接到 <span style="color:rgb(0, 255, 13)">xxxxxxxx</span></h3>
+<h3 class="a">A：服务器临时分配了另一个地址，你可以选择新建服务器输入它提供的地址(<span style="color:rgb(0, 255, 13)">xxxxxxxx</span>)，也可以重进试试。</h3>
+
+<h3 class="q">Q：你并未获邀在此服务器上进行游戏</h3>
+<h3 class="a">A：未加入白名单或者您的名字提供错误，请联系腐竹将正确的名字加入白名单</h3>
+
+<h3 class="q">Q：服务器延迟过高，有什么办法吗</h3>
+<h3 class="a">A：可以 <a href="https://www.itdog.cn/ping/rukiroki.aternos.me" target="_blank">点此</a> 尝试寻找您当前地区延迟较低的DNS服务器，并更改您的DNS服务器。如何更改？： <a href="how-to-change-dns.html">点击此链接查看教程</a></h3>
+
+<div class="normal"></div>
+
+<h4>遇到其他问题？<a href="mailto:chenbingye@163.com?subject=我在加入服务器的过程中出现了问题&body=请详细描述您的问题">邮件</a> 或者 <a href="https://discord.com/invite/f5xXCygd" target="_blank">Discord</a></h4>
+</div>
+
+
+</body>
+</html>
