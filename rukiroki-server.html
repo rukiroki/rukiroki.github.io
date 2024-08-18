@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rukiroki</title>
+    <link rel="stylesheet" type="text/css" href="selector.css">
     <style>
         /* 对于宽度小于或等于768px的设备（通常是平板或手机） */
         @media screen and (max-width: 768px) {
@@ -40,24 +41,28 @@
             font-family: 'BAUHS93';
             line-height: 30px;
             padding-top: 20px;
+            margin: -10px;
+            padding: 20px 0px 10px 30px;
+
         }
         div.place{
             height: 60px;
+            
         }
         div{
-            padding: 10px 30px 10px 30px;
+            
             box-sizing: border-box;
-            margin: -10px;
         }
         .normal{
             box-shadow:0px 0px 0px;
             height: 200px;
+            
         }
         .main{
             color: #888888;
             background-color: #3d3d3d;
             padding-bottom: 50px;
-
+            padding: 10px 30px 10px 30px;
         }
         body{
             background-color: #3d3d3d;
@@ -101,15 +106,13 @@
             color: #000000;
 
         }
-        .h35{
-            color: #e49631;
-        }
+
         p{
             text-indent: 2em;
         }
         .version{
-            color: #f24133;
-            font-weight: 300;
+            color: blueviolet;
+            font-weight: 600;
             
         }
         hr{
@@ -120,8 +123,8 @@
         }
         
         a{
-            color: #3aa852;
-            font-weight: 300;
+            color: blueviolet;
+            font-weight: 400;
             text-decoration: none;
         }
         h3.a{
@@ -180,7 +183,7 @@
             font-weight: 400;
             margin: 0;
             padding: 0;
-            
+            float: right;
             height: 40px;
             width: 160px;
             border-radius: 0px;
@@ -201,6 +204,11 @@
             0px -2px 0px 0px #17cd07  inset,
             -2px 0px 0px 0px #17cd07  inset;
 
+        }
+        div.next{
+            height: 0px;
+            overflow: hidden;
+            transition: .3s cubic-bezier(0.165, 0.84, 0.44, 1);
         }
     </style>
     <script>
@@ -227,7 +235,106 @@
             );
         }
         }
-        
+        function next_999_close(){
+            document.getElementById("next_999_a").style.height='0px';
+            document.getElementById("next_999_b").style.height='0px';
+            document.getElementById("bar999").style.marginLeft='-100%';
+
+        }
+        function clickMenu_999_a(){
+            next_999_close();
+            next_0_close();
+            next_1_close();
+            next_2_close();
+            document.getElementById("bar999").style.marginLeft='0%';
+            document.getElementById("next_999_a").style.height='50px';
+        }
+        function clickMenu_999_b(){
+            next_999_close();
+            next_0_close();
+            next_1_close();
+            next_2_close();
+            document.getElementById("bar999").style.marginLeft='50%';
+            document.getElementById("next_999_b").style.height='60px';
+        }
+        function next_0_close(){
+            document.getElementById("next_0_b").style.height='0px';
+            document.getElementById("next_0_a").style.height='0px';
+
+        }
+        function clickMenu_0_a(){
+            next_0_close();
+            next_1_close();
+            next_2_close();
+            document.getElementById("bar0").style.marginLeft='0%';
+            document.getElementById("next_0_a").style.height='50px';
+        }
+        function clickMenu_0_b(){
+            next_0_close();
+            next_1_close();
+            next_2_close();
+            document.getElementById("bar0").style.marginLeft='50%';
+            document.getElementById("next_0_b").style.height='360px';
+        }
+        function next_1_close(){
+            document.getElementById("next_1_b").style.height='0px';
+            document.getElementById("next_1_a").style.height='0px';
+            document.getElementById("bar1").style.marginLeft='-100%';
+
+        }
+        function clickMenu_1_a(){
+            next_1_close();
+            next_2_close();
+            document.getElementById("bar1").style.marginLeft='0%';
+            document.getElementById("next_1_a").style.height='50px';
+        }
+        function clickMenu_1_b(){
+            next_1_close();
+            next_2_close();
+            document.getElementById("bar1").style.marginLeft='50%';
+            document.getElementById("next_1_b").style.height='50px';
+        }
+        function next_2_close(){
+            document.getElementById("next_2_a").style.height='0px';
+            document.getElementById("next_2_b").style.height='0px';
+            document.getElementById("next_2_c").style.height='0px';
+            document.getElementById("next_2_a_2").style.height='0px';
+            document.getElementById("next_2_b_2").style.height='0px';
+            document.getElementById("next_2_c_2").style.height='0px';
+            document.getElementById("bar2").style.marginLeft='-100%';
+
+        }
+        function clickMenu_2_a(){
+            next_2_close();
+            document.getElementById("bar2").style.marginLeft='0%';
+            document.getElementById("next_2_a").style.height='50px';
+        }
+        function clickMenu_2_b(){
+            next_2_close();
+            document.getElementById("bar2").style.marginLeft='33%';
+            document.getElementById("next_2_b").style.height='80px';
+        }
+        function clickMenu_2_c(){
+            next_2_close();
+            document.getElementById("bar2").style.marginLeft='66%';
+            document.getElementById("next_2_c").style.height='70px';
+        }
+        function clickMenu_2_a_2(){
+            next_2_close();
+            document.getElementById("bar2_2").style.marginLeft='0%';
+            document.getElementById("next_2_a_2").style.height='50px';
+        }
+        function clickMenu_2_b_2(){
+            next_2_close();
+            document.getElementById("bar2_2").style.marginLeft='33%';
+            document.getElementById("next_2_b_2").style.height='210px';
+        }
+        function clickMenu_2_c_2(){
+            next_2_close();
+            document.getElementById("bar2_2").style.marginLeft='66%';
+            document.getElementById("next_2_c_2").style.height='70px';
+        }
+     
     </script>
 </head>
 <body>
@@ -238,36 +345,104 @@
 <audio id="buttonAudio" src="audio/release-7c974.ogg" preload="auto"></audio>
 <div class="top">Rukiroki</div>
 <div class="place"></div>
-<h2 class="h25 q1">在开始之前</h2>
-<h3>此服务器是会一直开下去的免费服务器。纯生存无死亡不掉落，作弊模式：关。刻度距：4。Mod：无mod，但有光线追踪资源包。请确保你会遵守戏规则，文明游戏。</h3>
-<h2 class="h25 q1">如何加入</h2>
+<h3>此服务器是会一直开下去的免费服务器。纯生存无死亡不掉落，作弊模式：关。刻度距：4。Mod：无mod，但有光线追踪资源包。请确保你会遵守戏规则，文明游戏。当前游戏版本：<span class="version">1.21.20</span></h3>
+<h2 class="h25 q1">下载链接</h2>
 <!-- <h2>0，我已做好万全准备，只差加入服务器</h2>
 
 <h3>点击此按钮将跳转到Minecraft客户端，并自动为您的游戏添加服务器<a href="https://add.aternos.org/rukiroki" target="_blank"><div class="button">添加服务器</div></a>之后您可以从服务器列表找到该服务器。</h3>
 <h2>：如果您没有我的世界，以下是安装教程</h2> -->
-<h2>1，确保你有一个微软账户</h2>
-<h3><a href="https://account.microsoft.com/account/Account?mkt=zh-CN" target="_blank"><div class="button">创建账户</div></a></h3>
-<h2>2，下载游戏</h2>
-<h3>当前游戏版本：<span class="version">1.21.2</span></h3>
-<h3  class="h35">支持正版：</h3>
-<h3> 安卓：从谷歌商店购买Minecraft：<a href="https://play.google.com/store/search?q=minecraft&c=apps&hl=zh-CN" target="_blank"><div class="button">立即购买</div></a></h3>
-<h3> Windows：从微软商店购买：<a href="https://www.xbox.com/zh-cn/games/store/minecraft-java-bedrock-edition-for-pc/9nxp44l49shj" target="_blank"><div class="button">前往购买</div></a></h3>
-<h3> 并从此链接下载安装包：安装即可。<a href="https://www.mcappx.com/bedrock/1.21/#release-1212" target="_blank"><div class="button">下载</div></a></h3>
+<h2>你是否有微软账户</h2>
+
+<h3></h3>
+<div class="mainmenu">
+    <div class="top1">
+        <div class="menu" id="a" onclick="clickMenu_999_a()">是</div>
+        <div class="menu" id="b" onclick="clickMenu_999_b()">否</div>
+    </div>
+    <div class="bar" id="bar999"></div>
+</div>
+<div class="next" id="next_999_a">
+    <div class="mainmenu">
+        <div class="top1">
+            <div class="menu" id="a" onclick="clickMenu_0_a()">下载游戏</div>
+            <div class="menu" id="b" onclick="clickMenu_0_b()">加入服务器</div>
+        </div>
+        <div class="bar" id="bar0"></div>
+    </div>
+</div>
+<div class="next" id="next_999_b">
+    <h3><a href="https://account.microsoft.com/account/Account?mkt=zh-CN" target="_blank"><div class="button">创建账户</div></a></h3>
+</div>
+
+<div class="next" id="next_0_a">
+    <div class="mainmenu">
+        <div class="top1">
+            <div class="menu" id="a" onclick="clickMenu_1_a()">正版</div>
+            <div class="menu" id="b" onclick="clickMenu_1_b()">破解版</div>
+        </div>
+        <div class="bar" id="bar1"></div>
+    </div>
+</div>
+<div class="next" id="next_0_b">
+    <h2>1，在游戏里登录微软账号</h2>
+    <h3><p>Windows版本会自动通过电脑账户自动登录Minecraft。手机版用户在游戏左下角登录您的Xbox（同微软）账户。</p></h3>
+    <h2>2，输入服务器ip和端口加入游戏</h2>
+    <p>服务器IP：<span class="tocopy" onclick="setClipboard(serverip)">rukiroki.zapto.org</span> 端口：<span class="tocopy" onclick="setClipboard(serverport)">40000</span><span class="ps">点击深色区域复制到剪切板</span></p>
+    <h2>3，申请加入白名单</h2>
+        <!-- <h3>或者直接点击<a href="https://add.aternos.org/rukiroki" target="_blank"><div class="button">添加服务器</div></a></h3> -->
+        <h3>请在加入之前联系游戏管理员将您的名字加入白名单</h3>
+</div>
+<div class="next" id="next_1_a">
+    <div class="mainmenu">
+        <div class="top1">
+            <div class="menu" id="a" onclick="clickMenu_2_a()">安卓</div>
+            <div class="menu" id="b" onclick="clickMenu_2_b()">Windows</div>
+            <div class="menu" id="c" onclick="clickMenu_2_c()">苹果</div>
+        </div>
+    <div class="bar" style="width: 33%;" id="bar2"></div>
+    </div>
+</div>
+<div class="next" id="next_1_b">
+    <div class="mainmenu">
+        <div class="top1">
+            <div class="menu" id="a" onclick="clickMenu_2_a_2()">安卓</div>
+            <div class="menu" id="b" onclick="clickMenu_2_b_2()">Windows</div>
+            <div class="menu" id="c" onclick="clickMenu_2_c_2()">苹果</div>
+        </div>
+        <div class="bar" style="width: 33%;" id="bar2_2"></div>
+    </div>
+</div>
+<div class="next" id="next_2_a">
+    <a href="https://play.google.com/store/search?q=minecraft&c=apps&hl=zh-CN" target="_blank"><div class="button">谷歌商店购买</div></a>
+</div>
+<div class="next" id="next_2_b">
+    <a href="https://www.xbox.com/zh-cn/games/store/minecraft-java-bedrock-edition-for-pc/9nxp44l49shj" target="_blank"><div class="button">前往Xbox购买</div></a>
+    <a href="https://www.mcappx.com/bedrock/1.21/#release-12121" target="_blank"><div class="button">下载安装包</div></a>
+</div>
+<div class="next" id="next_2_c">
 <h3>苹果：如果您没有境外ios账户，则无法支持正版。</h3> 
-<h3 class="h35">免费用户：</h3>
-<h3>安卓：直接点击按钮下载安装即可<a href="https://mcapks.net/down.php?vs=1.21.2.02_64" target="_blank"><div class="button">安卓版</div></a>
-<h3> Windows：从此链接下载安装包：<a href="https://www.mcappx.com/bedrock/1.21/#release-1212" target="_blank"><div class="button">Windows版</div></a></h3>
-<h3>安装，并进入此网址获取免费试用版：<a href="https://www.microsoft.com/zh-hk/p/minecraft-for-windows/9nblggh2jhxj" target="_blank"><div class="button">免费试用</div></a>并从此链接下载破解器：<a href="https://wwz.lanzout.com/i0IQc12r3wlc" target="_blank"><div class="button">MCUnlocker</div></a>密码:de3t。运行破解器即可。</h3> 
-<h3> 苹果：借国际版ios账号下载，具体参见qq频道<a href="https://pd.qq.com/s/h330oyzd4" target="_blank"><div class="button">加入qq频道</div></a></h3>
+</div>
+<div class="next" id="next_2_a_2">
+    <a href="https://mcapks.net/down.php?vs=1.21.21.01_64" target="_blank"><div class="button">安卓版下载</div></a>
+
+</div>
+<div class="next" id="next_2_b_2">
+    <p>Windows：从此链接下载安装包：<a href="https://www.mcappx.com/bedrock/1.21/#release-12121" target="_blank"><div class="button">Windows版下载</div></a></p>
+    <p> 安装，并进入此网址获取免费试用版：<a href="https://www.microsoft.com/zh-hk/p/minecraft-for-windows/9nblggh2jhxj" target="_blank"><div class="button">获取免费试用</div></a></p>
+    <p>并从此链接下载破解器：<a href="https://wwz.lanzout.com/i0IQc12r3wlc" target="_blank"><div class="button">下载破解器</div></a>密码:de3t。运行破解器即可。</p> 
+    
+</div>
+<div class="next" id="next_2_c_2">
+    苹果：借国际版ios账号下载，具体参见qq群<a href="https://qm.qq.com/q/LBfrXV4e84" target="_blank"><div class="button">加入qq群</div></a>
 </h3>
-<h2>3，登录游戏</h2>
-<h3><p>Windows版本会自动通过电脑账户自动登录Minecraft。手机版用户在游戏左下角登录您的Xbox（同微软）账户。</p></h3>
-<h2>4，加入服务器</h2>
-<h3><p>服务器IP：<span class="tocopy" onclick="setClipboard(serverip)">rukiroki.zapto.org</span> 端口：<span class="tocopy" onclick="setClipboard(serverport)">40000</span><span class="ps">点击深色区域复制到剪切板</span></p>
-<!-- <h3>或者直接点击<a href="https://add.aternos.org/rukiroki" target="_blank"><div class="button">添加服务器</div></a></h3> -->
-<h3>请在加入之前联系腐竹将您的名字加入白名单</h3>
+
+</div>
+
+
+
+
 <h2 class="q1">地图（点击预览）</h2>
-<a href="overworld/unmined.index.html" target="_blank"><img src="https://s.tkbot.fun/img/mappreview.png" alt="地图预览"></a>
+<a href="http://rukiroki.zapto.org:30000" target="_blank"><img src="https://s.tkbot.fun/img/mappreview.png" alt="地图预览"></a>
 </div>
 <div class="questions">
 <h2 class="h25 q1">遇到问题？</h2>
@@ -281,7 +456,7 @@
 <h3 class="a">A：<a href="how-to-block-win10mc-update.html" target="_blank">点击此链接查看教程</a></h3>
 
 <h3 class="q">Q：此服务器处于离线状态</h3>
-<h3 class="a">A：联系有开启权限的玩家开启服务器（服务器会在最后一个玩家离开一段时间自动关闭）</h3>
+<h3 class="a">A：服务器可能正在自动备份，也可能掉线了，请联系游戏管理员</h3>
 
 <h3 class="q">Q：不成功	在XXXX目录中找不到xxxxx，请稍后再试</h3>
 <h3 class="a">A：请在其他浏览器进行下载，不要使用微信浏览器</h3>
@@ -292,8 +467,8 @@
 <h3 class="q">Q：Minecraft在电脑上安装好了，在哪启动？</h3>
 <h3 class="a">A：开始菜单</h3>
 
-<h3 class="q">Q：游戏版本是基岩版吗</h3>
-<h3 class="a">A：对，是基岩版</h3>
+<h3 class="q">Q：是基岩版吗</h3>
+<h3 class="a">A：对，是基岩版，不是Java版</h3>
 
 <h3 class="q">Q：您好：<span style="color:rgb(0, 255, 13)">玩家名</span> 连接到 <span style="color:rgb(0, 255, 13)">xxxxxxxx</span></h3>
 <h3 class="a">A：服务器临时分配了另一个地址，你可以选择新建服务器输入它提供的地址(<span style="color:rgb(0, 255, 13)">xxxxxxxx</span>)，也可以重进试试。</h3>
@@ -302,7 +477,7 @@
 <h3 class="a">A：未加入白名单或者您的名字提供错误，请联系腐竹将正确的名字加入白名单</h3>
 
 <h3 class="q">Q：服务器延迟过高，有什么办法吗</h3>
-<h3 class="a">A：可以 <a href="https://www.itdog.cn/ping/rukiroki.aternos.me" target="_blank">点此</a> 尝试寻找您当前地区延迟较低的DNS服务器，并更改您的DNS服务器。如何更改？： <a href="how-to-change-dns.html">点击此链接查看教程</a></h3>
+<h3 class="a">尝试切换您的网络</h3>
 
 <div class="normal"></div>
 
