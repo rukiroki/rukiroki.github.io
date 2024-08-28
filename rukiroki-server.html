@@ -334,7 +334,14 @@
             document.getElementById("bar2_2").style.marginLeft='66%';
             document.getElementById("next_2_c_2").style.height='70px';
         }
-     
+        function mapurl(){  
+            var ua = navigator.userAgent.toLowerCase();  
+            if(ua.match(/MicroMessenger/i)=="micromessenger") {  
+                window.open("overworld/index.html");
+            } else {  
+                window.open("http://rukiroki.zapto.org:30000");
+            }  
+        }
     </script>
 </head>
 <body>
@@ -442,7 +449,7 @@
 
 
 <h2 class="q1">地图（点击预览）</h2>
-<a href="/overworld/index.html" target="_blank"><img src="https://s.tkbot.fun/proxy/img/mapview.jpeg" alt="地图预览"></a>
+<img onclick="mapurl()" src="https://s.tkbot.fun/proxy/img/mapview.jpeg" alt="地图预览">
 </div>
 <div class="questions">
 <h2 class="h25 q1">遇到问题？</h2>
