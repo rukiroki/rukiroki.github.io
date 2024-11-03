@@ -62,12 +62,14 @@
         .main{
             color: #888888;
             /* background-color: #3d3d3d; */
-            background-color: #3f3045;
+            /* background-color: #3f3045; */
+            background-color: #00000093;
             padding-bottom: 50px;
             padding: 10px 30px 10px 30px;
         }
         body{
-            background-color: #2e2230;
+            /* background-color: #2e2230; */
+            background-color: #cccc8e;
 
             /* background-image: url('img/back.png'); */
             overflow-x: hidden;
@@ -113,7 +115,8 @@
             text-indent: 2em;
         }
         .version{
-            color: #971d28;
+            /* color: #971d28; */
+            color: #d6d699;
             font-weight: 600;
             
         }
@@ -125,7 +128,8 @@
         }
         
         a{
-            color: #971d28;
+            /* color: #971d28; */
+            color: #e0a9df;
             font-weight: 400;
             text-decoration: none;
         }
@@ -153,6 +157,9 @@
             margin-right: -30px;
             line-height: 2em;
             background-color: #c6c6c6;
+        }
+        .tocopy:hover{
+            cursor: pointer;
         }
         .tocopy{
             background-color: rgba(0, 0, 0, 0.5);
@@ -195,7 +202,7 @@
             2px 0px 0px 0px #f7f7f7 inset,
             0px -2px 0px 0px #656465 inset,
             -2px 0px 0px 0px #656465 inset;
-
+            user-select: none;
         }
         div.button:hover{
             color: #ffffff;
@@ -227,6 +234,23 @@
         var button=document.getElementsByClassName('button');
         console.log(button);
         window.onload=function(){
+            clickMenu_999_a()
+            clickMenu_0_a()
+            clickMenu_1_a()
+            
+                if(/iPhone|iPad/i.test(navigator.platform)){
+                    clickMenu_2_c()
+
+                }else{
+                    if (window.innerWidth >= 769){
+                        clickMenu_2_b()
+                    }else{
+                        clickMenu_2_a()
+
+                    }
+                }
+            
+
             for (let i = 0; i < button.length; i++) {
             button[i].addEventListener('click',
                 function(){
@@ -354,7 +378,7 @@
 <audio id="buttonAudio" src="audio/release-7c974.ogg" preload="auto"></audio>
 <div class="top">Rukiroki</div>
 <div class="place"></div>
-<h3>此服务器是会一直开下去的免费服务器。纯生存无死亡不掉落，作弊模式：关。刻度距：4。Mod：无mod，但有光线追踪资源包。请确保你会遵守戏规则，文明游戏。当前游戏版本：<span class="version">1.21.30</span></h3>
+<h3>此服务器是会一直开下去的免费服务器。纯生存无死亡不掉落，作弊模式：关。刻度距：4。Mod：无mod，但有光线追踪资源包。请确保你会遵守戏规则，文明游戏。当前游戏版本：<span class="version">1.21.43</span></h3>
 <h2 class="h25 q1">下载链接</h2>
 <!-- <h2>0，我已做好万全准备，只差加入服务器</h2>
 
@@ -396,7 +420,7 @@
     <h2>1，在游戏里登录微软账号</h2>
     <h3><p>Windows版本会自动通过电脑账户自动登录Minecraft。手机版用户在游戏左下角登录您的Xbox（同微软）账户。</p></h3>
     <h2>2，输入服务器ip和端口加入游戏</h2>
-    <p>服务器IP：<span class="tocopy" onclick="setClipboard(serverip)">rukiroki.zapto.org</span> 端口：<span class="tocopy" onclick="setClipboard(serverport)">40000</span><span class="ps">点击深色区域复制到剪切板</span></p>
+    <h3>服务器IP：<span class="tocopy" onclick="setClipboard(serverip)">rukiroki.zapto.org</span> 端口：<span class="tocopy" onclick="setClipboard(serverport)">40000</span><span class="ps">点击深色区域复制到剪切板</span></h3>
     <h2>3，申请加入白名单</h2>
     <!-- <h3>或者直接点击<a href="https://add.aternos.org/rukiroki" target="_blank"><div class="button">添加服务器</div></a></h3> -->
     <h3>请在加入之前联系游戏管理员将您的名字加入白名单</h3>
@@ -426,19 +450,19 @@
 </div>
 <div class="next" id="next_2_b">
     <a href="https://www.xbox.com/zh-cn/games/store/minecraft-java-bedrock-edition-for-pc/9nxp44l49shj" target="_blank"><div class="button">前往Xbox购买</div></a>
-    <a href="https://www.mcappx.com/bedrock/1.21/#release-12130" target="_blank"><div class="button">下载安装包</div></a>
+    <a href="https://www.mcappx.com/bedrock/1.21/#release-12143" target="_blank"><div class="button">下载安装包</div></a>
 </div>
 <div class="next" id="next_2_c">
 <h3>苹果：如果您没有境外ios账户，则无法支持正版。</h3> 
 </div>
 <div class="next" id="next_2_a_2">
-    <a href="https://www.123pan.com/s/9HM9-NXd7A" target="_blank"><div class="button">安卓版下载</div></a>
+    <a href="https://www.123865.com/s/9HM9-gtd7A" target="_blank"><div class="button">安卓版下载</div></a>
 
 </div>
 <div class="next" id="next_2_b_2">
-    <p>Windows：从此链接下载安装包：<a href="https://www.mcappx.com/bedrock/1.21/#release-12130" target="_blank"><div class="button">Windows版下载</div></a></p>
-    <p> 安装，并进入此网址获取免费试用版：<a href="https://www.microsoft.com/zh-hk/p/minecraft-for-windows/9nblggh2jhxj" target="_blank"><div class="button">获取免费试用</div></a></p>
-    <p>并从此链接下载破解器：<a href="https://wwz.lanzout.com/i0IQc12r3wlc" target="_blank"><div class="button">下载破解器</div></a>密码:de3t。运行破解器即可。</p> 
+    <p>Windows：从<a href="https://www.mcappx.com/bedrock/1.21/#release-12143" target="_blank">此链接</a>下载安装包：</p>
+    <p> 安装，并进入此网址获取免费试用版：</p><a href="https://www.microsoft.com/zh-hk/p/minecraft-for-windows/9nblggh2jhxj" target="_blank"><div class="button">获取免费试用</div></a>
+    <p>并从此链接下载破解器：密码:de3t。运行破解器即可。</p> <a href="https://wwz.lanzout.com/i0IQc12r3wlc" target="_blank"><div class="button">下载破解器</div></a>
     
 </div>
 <div class="next" id="next_2_c_2">
@@ -462,7 +486,7 @@
 <h3 class="a">A：Windows会自动更新游戏版本,重新安装你下载的Minecraft安装包。ps:此服务器不会频繁更新（每个大版本只会更新2~3次，照顾手机用户）</h3>
 
 <h3 class="q">Q：Windows版我的世界如何关闭自动更新</h3>
-<h3 class="a">A：<a href="how-to-block-win10mc-update.html" target="_blank">点击此链接查看教程</a></h3>
+<h3 class="a">A：<a href="how-to-block-win10mc-update.html" target="_blank">教程:如何关闭Windows版我的世界自动更新</a></h3>
 
 <h3 class="q">Q：此服务器处于离线状态</h3>
 <h3 class="a">A：服务器可能正在自动备份，也可能掉线了，请联系游戏管理员</h3>
@@ -476,8 +500,8 @@
 <h3 class="q">Q：Minecraft在电脑上安装好了，在哪启动？</h3>
 <h3 class="a">A：开始菜单</h3>
 
-<h3 class="q">Q：是基岩版吗</h3>
-<h3 class="a">A：对，是基岩版，不是Java版</h3>
+<h3 class="q">Q：电脑可以玩吗</h3>
+<h3 class="a">A：可以，下载链接在上面</h3>
 
 <h3 class="q">Q：您好：<span style="color:rgb(0, 255, 13)">玩家名</span> 连接到 <span style="color:rgb(0, 255, 13)">xxxxxxxx</span></h3>
 <h3 class="a">A：服务器临时分配了另一个地址，你可以选择新建服务器输入它提供的地址(<span style="color:rgb(0, 255, 13)">xxxxxxxx</span>)，也可以重进试试。</h3>
