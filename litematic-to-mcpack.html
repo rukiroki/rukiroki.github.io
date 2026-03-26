@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MC Java版投影转基岩版投影</title>
+</head>
+<body>
+    <div class="container">
+        <h1>⛏️ MC Java版投影转基岩版投影</h1>
+        
+        <div class="flow">
+            <!-- Step 1 -->
+            <div class="step">
+                <div class="file-icon litematic">LITEM</div>
+                <span class="step-label">Java投影</span>
+            </div>
+            
+            <div class="arrow-container">
+                <div class="arrow"></div>
+            </div>
+            
+            <!-- Converter 1 -->
+            <div class="step">
+                <div style="width: 50px;"></div>
+                <a href="litematic-to-nbt/" target="_blank" class="converter-card">
+                    <div class="converter-name">litematic → nbt 转换器</div>
+                    <div class="converter-url">litematic-to-nbt/</div>
+                </a>
+            </div>
+            
+            <div class="arrow-container">
+                <div class="arrow"></div>
+            </div>
+            
+            <!-- Step 2 -->
+            <div class="step">
+                <div class="file-icon nbt">NBT</div>
+                <span class="step-label">Java结构</span>
+            </div>
+            
+            <div class="arrow-container">
+                <div class="arrow"></div>
+            </div>
+            
+            <!-- Converter 2 -->
+            <div class="step">
+                <div style="width: 50px;"></div>
+                <a href="nbt-to-mcstructure/" target="_blank" class="converter-card">
+                    <div class="converter-name">nbt → mcstructure 转换器</div>
+                    <div class="converter-url">nbt-to-mcstructure/</div>
+                </a>
+            </div>
+            
+            <div class="arrow-container">
+                <div class="arrow"></div>
+            </div>
+            
+            <!-- Step 3 -->
+            <div class="step">
+                <div class="file-icon mcstructure">MCST</div>
+                <span class="step-label">基岩结构</span>
+            </div>
+            
+            <div class="arrow-container">
+                <div class="arrow"></div>
+            </div>
+            
+            <!-- Converter 3 -->
+            <div class="step">
+                <div style="width: 50px;"></div>
+                <a href="https://holoprint-mc.github.io/" target="_blank" class="converter-card">
+                    <div class="converter-name">mcstructure → mcpack 投影转换器</div>
+                    <div class="converter-url">holoprint-mc.github.io</div>
+                </a>
+            </div>
+            
+            <div class="arrow-container">
+                <div class="arrow"></div>
+            </div>
+            
+            <!-- Step 4 -->
+            <div class="step">
+                <div class="file-icon mcpack">MCPACK</div>
+                <span class="step-label">基岩投影</span>
+            </div>
+        </div>
+        
+        <div class="tips">
+            <strong>💡 使用提示：</strong><br>
+            1. 点击上方卡片即可打开对应转换工具<br>
+            2. 转换过程为单向流程，请按顺序操作<br>
+            3. HoloPrint 生成的 mcpack 可直接导入基岩版作为全息投影使用<br>
+
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll('.converter-card').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                setTimeout(() => {
+                    window.open(this.href, '_blank');
+                }, 200);
+            });
+        });
+    </script>
+</body>
+<style>
+    :root {
+        --primary-gradient: linear-gradient(135deg, #43cea2 0%, #185a9d 100%);
+        --container-bg: rgba(249, 253, 246, 0.98);
+        --container-shadow: 0 20px 60px rgba(24, 90, 157, 0.18);
+        --accent: #43cea2;
+        --accent-dark: #185a9d;
+        --text-main: #223046;
+        --text-muted: #4e5d6c;
+        --step-label: #2d8f7c;
+        --tips-bg: #e6f9f3;
+        --tips-border: #43cea2;
+        --tips-text: #185a9d;
+        --file-litematic-bg: #fffbe6;
+        --file-litematic-color: #e6b800;
+        --file-nbt-bg: #e6f0ff;
+        --file-nbt-color: #185a9d;
+        --file-mcstructure-bg: #e6fff7;
+        --file-mcstructure-color: #43cea2;
+        --file-mcpack-bg: #fbe6ff;
+        --file-mcpack-color: #a043ce;
+        --card-bg: #eefff3;
+        --card-border: #d1e7f5;
+        --card-hover-bg: #e6f9f3;
+        --card-hover-border: #43cea2;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        background: var(--primary-gradient);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        color: var(--text-main);
+    }
+
+    .container {
+        background: var(--container-bg);
+        backdrop-filter: blur(10px);
+        border-radius: 36px 0px 36px 0px;
+        padding: 44px;
+        max-width: 620px;
+        width: 100%;
+        box-shadow: var(--container-shadow);
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 1.7rem;
+        font-weight: 800;
+        color: var(--accent-dark);
+        margin-bottom: 34px;
+        letter-spacing: -0.5px;
+    }
+
+    .flow {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        position: relative;
+    }
+
+    .step {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        padding: 14px 0;
+        position: relative;
+    }
+
+    .file-icon {
+        width: 54px;
+        height: 54px;
+        border-radius: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 800;
+        font-size: 0.85rem;
+        flex-shrink: 0;
+        box-shadow: 0 4px 10px rgba(24, 90, 157, 0.08);
+        border: 2px solid #fff;
+    }
+
+    .litematic { background: var(--file-litematic-bg); color: var(--file-litematic-color);}
+    .nbt { background: var(--file-nbt-bg); color: var(--file-nbt-color);}
+    .mcstructure { background: var(--file-mcstructure-bg); color: var(--file-mcstructure-color);}
+    .mcpack { background: var(--file-mcpack-bg); color: var(--file-mcpack-color);}
+
+    .arrow-container {
+        display: flex;
+        align-items: center;
+        padding-left: 69px;
+        margin: -5px 0;
+    }
+
+    .arrow {
+        width: 2.5px;
+        height: 32px;
+        background: linear-gradient(to bottom, #b2e0d6, #185a9d 80%);
+        position: relative;
+        border-radius: 2px;
+    }
+
+    .arrow::after {
+        content: '';
+        position: absolute;
+        bottom: -7px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 0;
+        border-left: 7px solid transparent;
+        border-right: 7px solid transparent;
+        border-top: 10px solid var(--accent-dark);
+    }
+
+    .converter-card {
+        background: var(--card-bg);
+        border: 2px solid var(--card-border);
+        border-radius: 13px;
+        padding: 14px 18px;
+        margin-left: 15px;
+        flex: 1;
+        transition: all 0.3s cubic-bezier(.4,2,.6,1);
+        cursor: pointer;
+        text-decoration: none;
+        display: block;
+        box-shadow: 0 2px 8px rgba(67, 206, 162, 0.07);
+    }
+
+    .converter-card:hover {
+        background: var(--card-hover-bg);
+        border-color: var(--card-hover-border);
+        transform: translateX(7px) scale(1.03);
+        box-shadow: 0 6px 18px rgba(67, 206, 162, 0.18);
+    }
+
+    .converter-name {
+        font-weight: 700;
+        color: var(--accent-dark);
+        font-size: 1rem;
+        margin-bottom: 2px;
+    }
+
+    .converter-url {
+        font-size: 0.78rem;
+        color: var(--accent);
+        word-break: break-all;
+    }
+
+    .step-label {
+        font-weight: 700;
+        color: var(--step-label);
+        font-size: 1rem;
+        min-width: 90px;
+    }
+
+    .tips {
+        margin-top: 28px;
+        padding: 18px;
+        background: var(--tips-bg);
+        border-left: 5px solid var(--tips-border);
+        border-radius: 10px;
+        font-size: 0.92rem;
+        color: var(--tips-text);
+        line-height: 1.6;
+    }
+
+    .tips strong {
+        color: var(--accent-dark);
+    }
+
+    @media (max-width: 480px) {
+        .container {
+            padding: 25px;
+        }
+        
+        h1 {
+            font-size: 1.25rem;
+        }
+        
+        .file-icon {
+            width: 40px;
+            height: 40px;
+            font-size: 0.65rem;
+        }
+        
+        .arrow-container {
+            padding-left: 55px;
+        }
+    }
+</style>
